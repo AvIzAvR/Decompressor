@@ -79,7 +79,6 @@ void print_compress(FILE* file,FILE* compressedFile, char** wordsA, char** words
     }
     free(word);
     fseek(compressedFile,0,SEEK_END);
-    ftruncate(fileno(compressedFile), ftell(compressedFile) - 1);
 }
 
 int print_wLength(char** words, int n) {
